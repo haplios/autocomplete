@@ -7,12 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BenchmarkDotNet" Version="0.14.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Data\Hap.Algo.Data.csproj" />
-    <ProjectReference Include="..\Services\Hap.Algo.Services.csproj" />
+    <ProjectReference Include="..\Hap.Algo.Common\Hap.Algo.Common.csproj" />
+    <ProjectReference Include="..\Hap.Algo.Data\Hap.Algo.Data.csproj" />
   </ItemGroup>
 
 </Project>

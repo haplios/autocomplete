@@ -17,8 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Data\Hap.Algo.Data.csproj" />
-    <ProjectReference Include="..\Services\Hap.Algo.Services.csproj" />
+    <ProjectReference Include="..\..\Hap.Algo.Data\Hap.Algo.Data.csproj" />
+    <ProjectReference Include="..\..\Hap.Algo.Services\Hap.Algo.Services.csproj" />
   </ItemGroup>
 
 </Project>

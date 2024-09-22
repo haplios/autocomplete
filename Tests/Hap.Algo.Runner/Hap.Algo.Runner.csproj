@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Benchmarks\Hap.Algo.Benchmarks.csproj" />
+    <ProjectReference Include="..\Hap.Algo.Benchmarks\Hap.Algo.Benchmarks.csproj" />
   </ItemGroup>
 
 </Project>
