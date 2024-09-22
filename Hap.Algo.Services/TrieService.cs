@@ -31,7 +31,9 @@ public class TrieService : ITrieService
         return result;
     }
 
-    private void BuildTrieNode(char[] letters, TrieNode root)
+    private void BuildTrieNode(
+        char[] letters,
+        TrieNode root)
     {
         if (letters.Length == 0)
         {

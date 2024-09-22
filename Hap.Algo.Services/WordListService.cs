@@ -28,7 +28,8 @@ public class WordListService : IWordListService
         _words = await _wordListSource.GetFrozenWordList();
     }
 
-    private async Task LoadWords(string fileName)
+    private async Task LoadWords(
+        string fileName)
     {
         if (_words != null)
             return;
@@ -42,7 +43,8 @@ public class WordListService : IWordListService
         return Words;
     }
 
-    public async Task<FrozenSet<string>> GetWordListAsync(string fileName)
+    public async Task<FrozenSet<string>> GetWordListAsync(
+        string fileName)
     {
         await LoadWords(fileName);
         return Words;
