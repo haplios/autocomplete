@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj" />
-    <ProjectReference Include="..\Data\Data.csproj" />
+    <ProjectReference Include="..\Common\Hap.Algo.Common.csproj" />
+    <ProjectReference Include="..\Data\Hap.Algo.Data.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Web.Pages
+namespace Hap.Algo.Web.Pages
 {
     public class PrivacyModel : PageModel
     {

@@ -1,20 +1,17 @@
 ﻿using BenchmarkDotNet.Attributes;
-using Data;
+using Hap.Algo.Data;
 
-namespace Benchmarks
+namespace Hap.Algo.Benchmarks;
+
+[SimpleJob]
+public class FileLoading
 {
-    [SimpleJob]
-    public class FileLoading
+    private readonly IWordListFileSource _wordList = new WordListFileSource();
+    const string FILE_NAME = "./words_alpha.txt";
+
+    [Benchmark]
+    public async Task LoadData()
     {
-        private readonly IWordListFileSource _wordList = new WordListFileSource();
-
-
-        const string FILE_NAME = "./words_alpha.txt";
-
-        [Benchmark]
-        public async Task LoadData()
-        {
-            var results = await _wordList.GetFrozenWordList(FILE_NAME);
-        }
+        var results = await _wordList.GetFrozenWordList(FILE_NAME);
     }
 }

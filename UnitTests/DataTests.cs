@@ -1,39 +1,25 @@
-﻿using Data;
+﻿using Hap.Algo.Data;
 using NUnit.Framework;
-using Services;
 
-namespace UnitTests
+namespace Hap.Algo.UnitTests;
+
+internal class DataTests
 {
+    private IWordListFileSource _wordListSource;
 
-    public class DataTests
+    const string FILE_NAME = "./words_alpha.txt";
+
+    [SetUp]
+    public void Setup()
     {
-        private IWordListFileSource _wordListSource;
-        private IWordListService _wordListService;
+        _wordListSource = new WordListFileSource();
+    }
 
-        const string FILE_NAME = "./words_alpha.txt";
+    [Test]
+    public async Task LoadWordsTest()
+    {
+        var results = await _wordListSource.GetFrozenWordList(FILE_NAME);
 
-        [SetUp]
-        public void Setup()
-        {
-            _wordListSource = new WordListFileSource();
-            _wordListService = new WordListService(_wordListSource);
-        }
-
-        [Test]
-        public async Task LoadWordsTest()
-        {
-            var results = await _wordListSource.GetFrozenWordList(FILE_NAME);
-
-            Assert.That(results.Count > 0);
-        }
-
-        [Test]
-        public async Task WordListServiceTest()
-        {
-            var results = await _wordListService.GetWordListAsync(FILE_NAME);
-
-            Assert.That(results.Count > 0);
-        }
-
+        Assert.That(results.Count > 0);
     }
 }

@@ -1,7 +1,6 @@
-﻿namespace Common
+﻿namespace Hap.Algo.Common;
+
+public class TrieNode
 {
-    public class TrieNode
-    {
-        public Dictionary<string, TrieNode> Children = new Dictionary<string, TrieNode>();
-    }
+    public Dictionary<char, TrieNode?> Children = new Dictionary<char, TrieNode?>();
 }

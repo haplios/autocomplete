@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
@@ -12,7 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Benchmarks\Benchmarks.csproj" />
+    <ProjectReference Include="..\Data\Hap.Algo.Data.csproj" />
+    <ProjectReference Include="..\Services\Hap.Algo.Services.csproj" />
   </ItemGroup>
 
 </Project>
