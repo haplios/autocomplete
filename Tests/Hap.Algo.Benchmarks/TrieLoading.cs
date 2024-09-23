@@ -1,26 +1,36 @@
 ﻿using BenchmarkDotNet.Attributes;
 using Hap.Algo.Data;
 using Hap.Algo.Services;
+using System.Collections.Frozen;
 
 namespace Hap.Algo.Benchmarks;
 
-[SimpleJob]
+[MemoryDiagnoser]
 public class TrieLoading
 {
     private readonly IWordListFileSource _wordList;
-    private readonly IWordListService _wordListService;
     private readonly ITrieService _trieService;
+    private const string FILE_NAME = "./words_alpha.txt";
+
+    private FrozenSet<string>? _frozenWords;
+    private string[]? _words;
 
     public TrieLoading()
     {
         _wordList = new WordListFileSource();
-        _wordListService = new WordListService(_wordList);
-        _trieService = new TrieService(_wordListService);
+        _trieService = new TrieService();
+    }
+
+    [GlobalSetup]
+    public async Task Setup()
+    {
+        //_frozenWords = await _wordList.GetWordsFrozenSet(FILE_NAME);
+        _words = await _wordList.GetWords(FILE_NAME);
     }
 
     [Benchmark]
-    public async Task LoadData()
+    public void BenchmarkBuildTrie()
     {
-        var trie = await _trieService.BuildTrie();
+        var trie = _trieService.BuildTrie(_words!);
     }
 }

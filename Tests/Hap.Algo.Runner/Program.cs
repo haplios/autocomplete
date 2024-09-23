@@ -2,4 +2,4 @@
 
 using BenchmarkDotNet.Running;
 
-var summary = BenchmarkRunner.Run(typeof(Hap.Algo.Benchmarks.TrieLoading).Assembly);
+var summary = BenchmarkRunner.Run(typeof(Hap.Algo.Benchmarks.TrieLoading));

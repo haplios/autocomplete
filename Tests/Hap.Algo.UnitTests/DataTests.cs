@@ -5,21 +5,19 @@ namespace Hap.Algo.UnitTests;
 
 internal class DataTests
 {
-    private IWordListFileSource _wordListSource;
-
+    private IWordListFileSource _wordListFileSource;
     const string FILE_NAME = "./words_alpha.txt";
 
     [SetUp]
     public void Setup()
     {
-        _wordListSource = new WordListFileSource();
+        _wordListFileSource = new WordListFileSource();
     }
 
     [Test]
-    public async Task LoadWordsTest()
+    public async Task WordListFileSource_GetWordsFrozenSet()
     {
-        var results = await _wordListSource.GetFrozenWordList(FILE_NAME);
-
+        var results = await _wordListFileSource.GetWordsFrozenSet(FILE_NAME);
         Assert.That(results.Count > 0);
     }
 }

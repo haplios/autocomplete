@@ -3,7 +3,7 @@ using Hap.Algo.Data;
 
 namespace Hap.Algo.Benchmarks;
 
-[SimpleJob]
+[MemoryDiagnoser]
 public class FileLoading
 {
     private readonly IWordListFileSource _wordList = new WordListFileSource();
@@ -12,6 +12,6 @@ public class FileLoading
     [Benchmark]
     public async Task LoadData()
     {
-        var results = await _wordList.GetFrozenWordList(FILE_NAME);
+        var results = await _wordList.GetWords(FILE_NAME);
     }
 }

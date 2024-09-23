@@ -12,8 +12,4 @@
     <ProjectReference Include="..\Hap.Algo.Services\Hap.Algo.Services.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\js\" />
-  </ItemGroup>
-
 </Project>
