@@ -19,6 +19,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hap.Algo.Services", "Hap.Al
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hap.Algo.Web", "Hap.Algo.Web\Hap.Algo.Web.csproj", "{6AAEFAA6-F1F1-47D8-8992-59CE9AF71D00}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodeGen", "CodeGen", "{E762329B-81A2-4966-9D1A-38B99E589CD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hap.Algo.CodeGen", "Hap.Algo.CodeGen\Hap.Algo.CodeGen.csproj", "{860EB13D-8DA6-43F5-AB26-626EAE1BBD0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +57,10 @@ Global
 		{6AAEFAA6-F1F1-47D8-8992-59CE9AF71D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AAEFAA6-F1F1-47D8-8992-59CE9AF71D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AAEFAA6-F1F1-47D8-8992-59CE9AF71D00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{860EB13D-8DA6-43F5-AB26-626EAE1BBD0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{860EB13D-8DA6-43F5-AB26-626EAE1BBD0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{860EB13D-8DA6-43F5-AB26-626EAE1BBD0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{860EB13D-8DA6-43F5-AB26-626EAE1BBD0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +69,7 @@ Global
 		{11019B0D-0BC1-4207-8460-D2052FE899D8} = {8E6C7C77-A6D5-4C02-B77C-F25F9142757D}
 		{92CF1ADC-3A75-43BA-A96F-F7873A9BAC3A} = {8E6C7C77-A6D5-4C02-B77C-F25F9142757D}
 		{D2F0DB0A-E757-4700-9561-949310A81441} = {8E6C7C77-A6D5-4C02-B77C-F25F9142757D}
+		{860EB13D-8DA6-43F5-AB26-626EAE1BBD0B} = {E762329B-81A2-4966-9D1A-38B99E589CD7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {465DB7CE-ED79-40FF-9ED5-472BDCADA299}

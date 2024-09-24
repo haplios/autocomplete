@@ -24,7 +24,7 @@ public class TrieLoading
     [GlobalSetup]
     public async Task Setup()
     {
-        //_frozenWords = await _wordList.GetWordsFrozenSet(FILE_NAME);
+        _frozenWords = await _wordList.GetWordsFrozenSet(FILE_NAME);
         _words = await _wordList.GetWords(FILE_NAME);
     }
 
