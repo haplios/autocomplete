@@ -6,7 +6,6 @@ var app = builder.Build();
 
 var words = await File.ReadAllLinesAsync("words_alpha.txt");
 var trie = new Trie();
-var wordCount = words.Length;
 
 foreach (var word in words)
     trie.Insert(word);
