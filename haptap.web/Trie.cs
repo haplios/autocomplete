@@ -18,7 +18,7 @@ public class Trie
         foreach (var c in word)
         {
             if (!node.Children.ContainsKey(c))
-                node.Children[c] = new TrieNode();
+                node.Children[c] = new TrieNode() { Key = c };
 
             node = node.Children[c];
         }
@@ -45,32 +45,25 @@ public class Trie
 
     public void ListWords(
         TrieNode currentNode,
-        List<string> words,
-        List<char> word)
+        char[] word,
+        List<string> words)
     {
-        if (words == null)
-            words = new List<string>();
-
-        if (word == null)
-            word = new List<char>();
-
         if (currentNode.IsEndOfWord)
-        {
-            words.Add(new string(word.ToArray()));
-            word = new List<char>();
-            return;
-        }
+            words.Add(new string(word));
 
         foreach (var node in currentNode.Children)
         {
-            word.Add(node.Key);
-            ListWords(node.Value, words, word);
+            char[] next = new char[word.Length + 1];
+            word.CopyTo(next, 0);
+            next[next.Length - 1] = node.Key;
+            ListWords(node.Value, next, words);
         }
     }
 }
 
 public class TrieNode
 {
+    public char Key { get; set; }
     public Dictionary<char, TrieNode> Children = new Dictionary<char, TrieNode>();
     public bool IsEndOfWord { get; set; }
 }
