@@ -18,7 +18,7 @@ public class Trie
         foreach (var c in word)
         {
             if (!node.Children.ContainsKey(c))
-                node.Children[c] = new TrieNode() { Key = c };
+                node.Children[c] = new TrieNode();
 
             node = node.Children[c];
         }
@@ -63,7 +63,6 @@ public class Trie
 
 public class TrieNode
 {
-    public char Key { get; set; }
     public Dictionary<char, TrieNode> Children = new Dictionary<char, TrieNode>();
     public bool IsEndOfWord { get; set; }
 }
