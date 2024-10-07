@@ -14,8 +14,7 @@ input {
 }
 
 .results {
-    font-size: 6rem;
+    font-size: 2.5rem;
     color: ghostwhite;
     max-width: 90%;
-    text-wrap: wrap;
 }
