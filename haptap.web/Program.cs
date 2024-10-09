@@ -1,16 +1,10 @@
 
 using haptap.web;
 
-var builder = WebApplication.CreateBuilder(new WebApplicationOptions()
-{
-    Args = args,
-    ContentRootPath = "/app/out",
-    WebRootPath = "wwwroot",
-});
-
+var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-var words = await File.ReadAllLinesAsync("words_alpha.txt");
+var words = await File.ReadAllLinesAsync("wwwroot/words_alpha.txt");
 var trie = new Trie();
 
 foreach (var word in words)
