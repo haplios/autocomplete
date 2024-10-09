@@ -30,6 +30,5 @@ app.Map("/search", (string searchtext) =>
     return ProcessSearch(searchtext);
 });
 
-app.UseHttpsRedirection();
 app.UseFileServer();
 app.Run();
