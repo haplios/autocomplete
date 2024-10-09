@@ -1,7 +1,13 @@
 
 using haptap.web;
 
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(new WebApplicationOptions()
+{
+    Args = args,
+    ContentRootPath = "/app/out",
+    WebRootPath = "wwwroot",
+});
+
 var app = builder.Build();
 
 var words = await File.ReadAllLinesAsync("words_alpha.txt");
