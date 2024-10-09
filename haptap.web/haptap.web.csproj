@@ -12,9 +12,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Resource Include="words_alpha.txt">
+	  <Content Include="words_alpha.txt">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </Resource>
+	  </Content>
 	</ItemGroup>
 
 </Project>
